@@ -1,4 +1,12 @@
 
+/*
+ * To compile this code, use a C++ compiler such as g++:
+ * g++ -o observer observer.cpp
+ *
+ * To run the compiled application:
+ * ./observer
+ */
+
 #include <iostream>
 #include <vector>
 #include <chrono>
@@ -34,6 +42,7 @@ public:
     // simulate event detection and notify observers
     void detectEvent() {
         std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << "Event occurred: one second elapsed." << std::endl;
         notifyObservers();
     }
 };
